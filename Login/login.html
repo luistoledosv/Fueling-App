@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<style>
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #loginForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20rem;
+        padding: 2rem;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .login-input-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    .login-input {
+        height: 3rem;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .login-button {
+        height: 3rem;
+        padding: 0 1rem;
+        border-radius: 0.25rem;
+        border: none;
+        background-color: #0077ff;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .login-button:hover {
+        background-color: #0066cc;
+    }
+</style>
+
+<body>
+    <!-- Formulário de login -->
+    <div class="loginContainer">
+        <form id="loginForm">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Entrar</button>
+        </form>
+
+        <div class="buttonCadastro">
+            <a href="/Users/luistoledo/Desktop/ChatGPT Projetos/Consumo de Combustivel v2/Login/cadastro.html">
+                <button>Cadastro</button>
+            </a>
+        </div>
+    
+        <!-- Mensagem de erro -->
+        <div id="errorMessage" style="display:none;">E-mail ou senha incorretos</div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        const form = document.querySelector("#loginForm");
+        form.addEventListener("submit", event => {
+            event.preventDefault();
+
+            const email = form.elements.email.value;
+            const password = form.elements.password.value;
+
+            const storedUser = JSON.parse(localStorage.getItem("user"));
+            if (storedUser && storedUser.email === email && storedUser.password === password) {
+                alert("Bem-vindo de volta!");
+                window.location.href = '/Users/luistoledo/Desktop/ChatGPT Projetos/Consumo de Combustivel v2/testes.html';
+            } else {
+                alert("Email ou senha incorretos.");
+            }
+
+            
+        });
+
+    </script>
+</body>
+
+</html>

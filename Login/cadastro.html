@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <form id="registerForm">
+        <label for="name">Nome:</label><br>
+        <input type="text" id="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email"><br>
+        <label for="password">Senha:</label><br>
+        <input type="password" id="password"><br><br>
+        <input type="submit" value="Cadastrar">
+    </form>
+    <script>
+        const registerForm = document.querySelector("#registerForm");
+        registerForm.addEventListener("submit", function (event) {
+            event.preventDefault(); // evita que a página recarregue ao submeter o formulário
+
+            const name = registerForm.elements.name.value;
+            const email = registerForm.elements.email.value;
+            const password = registerForm.elements.password.value;
+
+            const user = {
+                name: name,
+                email: email,
+                password: password
+            };
+
+            // adiciona o usuário ao localStorage
+            localStorage.setItem("user", JSON.stringify(user));
+
+            function cadastrar() {
+                // código para cadastrar o usuário
+                alert('Usuário cadastrado com sucesso!');
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>
