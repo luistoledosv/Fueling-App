@@ -1,5 +1,5 @@
 # Fueling App
-This project is an experiment that I started to create with Chat GPT from Open.ai. My goal is to learn how to code through the AI and develop my codigng skills.
+This project is an exciting experiment that I have embarked on using Chat GPT from OpenAI. My main objective is to learn how to code and develop my coding skills with the assistance of artificial intelligence. I believe that this approach will not only help me become more proficient in coding, but it will also allow me to think creatively and come up with innovative solutions to problems. As I continue to work on this project, I am confident that I will be able to make significant progress in my coding abilities and become a more skilled and effective developer.
 
 **App Scenarios:**
 - Login
