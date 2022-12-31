@@ -5,21 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Registration</title>
+    <title>Register</title>
+
+    <link rel="stylesheet" href="/Users/luistoledo/Desktop/ChatGPT Projetos/Consumo de Combustivel v3/css/login.css">
+    <link rel="stylesheet" href="/Users/luistoledo/Desktop/ChatGPT Projetos/Consumo de Combustivel v3/css/reset.css">
 </head>
 
-<body>
-    <form id="registerForm">
-        <label for="name">Nome:</label><br>
-        <input type="text" id="name"><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email"><br>
-        <label for="password">Senha:</label><br>
-        <input type="password" id="password"><br><br>
-        <input type="submit" value="Cadastrar">
-    </form>
+<body class="body">
+    <div class="container">
+        <div class="loginGroup">
+            <h1>Cadastre-se</h1>
+            <p>Faça seu cadastro para começar</p>
+
+            <!-- Mensagem de erro -->
+            <div id="errorMessage" style="display:none;">Preencha os campos corretamente</div>
+
+            <!-- Mensagem de Sucesso -->
+            <div id="okMessage" style="display:none;">Cadastro realizado com sucesso!</div>
+
+            <!-- Formulário -->
+            <form class="registerForm loginForm">
+                <label for="name">Nome:</label><br>
+                <input type="text" id="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email"><br>
+                <label for="password">Senha:</label><br>
+                <input type="password" id="password"><br><br>
+                <button type="submit">Cadastrar</button>
+            </form>
+
+            <!-- Botão de Cadastro -->
+            <p>ou</p>
+            <a href="/Users/luistoledo/Desktop/ChatGPT Projetos/Consumo de Combustivel v3/index.html">
+                <button class="btnCadastro">Login</button>
+            </a>
+
+        </div>
+    </div>
+
 </body>
 
-<script src="/Users/luistoledo/Desktop/ChatGPT Projetos/Consumo de Combustivel v3/js/register.js"> </script>
+<script src="/Users/luistoledo/Desktop/ChatGPT Projetos/Consumo de Combustivel v3/js/register.js"></script>
 
 </html>
